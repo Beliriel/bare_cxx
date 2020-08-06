@@ -18,7 +18,7 @@
 #include <cstddef>
 #include <dynarray>
 
-namespace std {
+using namespace std;
 
 template<class T>
 class initializer_list //: protected bare::dynarray
@@ -42,6 +42,6 @@ private:
   initializer_list(const T* ptr, size_t n) noexcept;
 };
 
-}
+
 
 #endif

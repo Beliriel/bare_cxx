@@ -1329,7 +1329,7 @@ struct _LIBCPP_TYPE_VIS_ONLY uses_allocator<tuple<_Tp...>, _Alloc>
 
 #endif // _LIBCPP_HAS_NO_VARIADICS
 
-#ifndef _LIBCPP_CXX03_LANG
+/*#ifndef _LIBCPP_CXX03_LANG
 template <class _T1, class _T2>
 template <class... _Args1, class... _Args2, size_t ..._I1, size_t ..._I2>
 inline _LIBCPP_INLINE_VISIBILITY
@@ -1340,7 +1340,7 @@ pair<_T1, _T2>::pair(piecewise_construct_t,
       second(_VSTD::forward<_Args2>(_VSTD::get<_I2>(__second_args))...)
 {
 }
-#endif // _LIBCPP_CXX03_LANG
+#endif // _LIBCPP_CXX03_LANG */
 
 #if _LIBCPP_STD_VER > 14
 template <class _Tp>

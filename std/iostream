@@ -66,7 +66,8 @@ basic_istream<CharT,Traits>& operator>>(
 
   CharT ch;
   const auto w0 =  st.width();
-  const auto w = (w0 > 0) ? w0 : s.max_size();
+  const auto w = (w0 > 0) ? w0 : s.buf_size();
+  //const auto w = (w0 > 0) ? w0 : s.max_size();
 
   s.clear();
 
@@ -76,7 +77,8 @@ basic_istream<CharT,Traits>& operator>>(
   auto& ctype_f = use_facet<ctype<CharT>>(st.getloc());
 #endif
 
-  const auto max_size = s.max_size();
+  const auto max_size = s.buf_size();
+  //  const auto max_size = s.max_size();
   using size_type = decltype(max_size);
 
   static_assert(sizeof(streamsize) >= sizeof(size_type), "check size types"); 

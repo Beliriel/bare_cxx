@@ -1139,7 +1139,7 @@ public:
     }
 
 protected:
-    CharT bs[];
+    CharT* bs;
 
     basic_const_char_array() noexcept
     {
