@@ -1,24 +1,33 @@
 The Bare C++ library
 ====================
 
-The Bare C++ library is (almost) standard C++-11 library
-specially designed for working in the kernel ring, for
+The Bare C++ library is an (almost) standard C++-11 library
+specially designed for working in the kernel ring (ring 0), for
 example, with exokernel operating systems and similar
-systems that lack a classical memory protection.
+systems that lack classical memory protection.
 
-Now the only supported systems are BareMetal
-OS and Linux (the last one is used as a base for runnung
+The only supported systems at the moment are BareMetal
+OS and Linux (the last one is used as a base for running
 a test set).
 
 The Bare C++ library is not based on any existing C++
-library but designed from scratch. It ever not based on C
-library or POSIX and uses things directly. So, we sacrify
-the tradition for better support of new conceptions like
-library-level address control for protect memory as an
-alternative to SIGSEGV etc.
+library but designed from scratch. It's not even based
+on the C library or POSIX and uses things directly. So, we
+sacrifice the tradition for better support of new conceptions
+like library-level address control for protect memory as
+an alternative to SIGSEGV etc.
 
 The library is freely distributed under the conditions of
 the 3-clause BSD license.
 
 For information of compiling the library and sample
 applications see INSTALL.
+
+Note by Beliriel after forking:
+The original repository had a submodule in std/types which
+in this repository got merged into the master branch and is
+not externalised.  
+In addition small changes have been made to the code, because
+it didn't compile on Linux. I do not claim to really understand
+the code, but I fixed all the compilation errors that happened
+on Linux Ubuntu 18.04. The changes are documented in Changelog.md
